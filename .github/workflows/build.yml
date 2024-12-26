@@ -3,7 +3,7 @@ name: Build ZMK Firmware
 on:
   push:
     branches:
-      - master
+      - main
       - sofle_hybrid_rgb_rev5
   workflow_dispatch:
 
@@ -14,8 +14,8 @@ jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
 
-  create_release_master:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+  create_release:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -32,7 +32,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.date.outputs.date }}-${{ github.sha }}
-          name: Firmware ${{ steps.date.outputs.date }} - master
+          name: Firmware ${{ steps.date.outputs.date }} - main
           body: Build from commit ${{ github.sha }}
           files: '*.uf2'
 
