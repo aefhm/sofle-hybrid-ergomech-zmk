@@ -37,7 +37,7 @@ layers:
   - DOWN
   - UP ARROW
   - RIGHT
-  - )
+  - ''
   - '|'
   - {t: ▽, type: trans}
   - '='
