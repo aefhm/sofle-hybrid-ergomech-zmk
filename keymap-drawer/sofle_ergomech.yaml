@@ -33,10 +33,10 @@ layers:
   - '#'
   - $
   - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
+  - LEFT
+  - DOWN
+  - UP ARROW
+  - RIGHT
   - )
   - '|'
   - {t: ▽, type: trans}
