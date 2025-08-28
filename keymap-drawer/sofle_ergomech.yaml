@@ -4,7 +4,7 @@ layers:
     Z, X, C, V, B, N, M, ',', ., /, RSHFT, MUTE, lower, LEFT CONTROL, LEFT ALT, LEFT COMMAND, ENTER, SPACE, RIGHT COMMAND, RIGHT ALT, RIGHT CONTROL, raise, ENTER,
     RIGHT, UP ARROW, LEFT, DOWN]
   lower:
-  - '&studio_unlock'
+  - {t: ▽, type: trans}
   - F1
   - F2
   - F3
